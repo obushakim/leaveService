@@ -13,8 +13,20 @@
 	<bean id="humanResourceService" class="com.tutorialspoint.hr.service.HumanResourceServiceImpl" />
 	<sws:annotation-driven />
 
-	<sws:dynamic-wsdl id="leave" portTypeName="HumanResource"
-		locationUri="/leaveService/" targetNamespace="http://tutorialspoint.com/hr/definitions">
+	<sws:dynamic-wsdl id="leave" 
+		portTypeName="HumanResource"
+		locationUri="/leaveService/" 
+		targetNamespace="http://tutorialspoint.com/hr/definitions">
+		
 		<sws:xsd location="/WEB-INF/hr.xsd" />
 	</sws:dynamic-wsdl>
+	
+	<sws:dynamic-wsdl id="countries"
+		portTypeName="CountriesPort"
+		locationUri="/countryService/" 
+		targetNamespace="http://tutorialspoint.com/hr/definitions">
+		
+		<sws:xsd location="/WEB-INF/countries.xsd" />
+	</sws:dynamic-wsdl>
+	
 </beans>
